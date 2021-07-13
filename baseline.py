@@ -163,14 +163,13 @@ else:
 # %%
 # training phase
 
-model_train = create_and_compile_model(vocab_length_train,length_long_sentence_train)
-model_test = create_and_compile_model(vocab_length_test,length_long_sentence_test)
+model = create_and_compile_model(vocab_length_train,length_long_sentence_train)
 
-train_model(model_train,padded_sentences_train,matches_train)
+train_model(model,padded_sentences_train,matches_train)
 
 
 # %%
 print("going to test model...")
-test_model(model_test,padded_sentences_test,matches_test)
+test_model(model,padded_sentences_test,matches_test)
 
 
